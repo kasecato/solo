@@ -8,9 +8,6 @@
 #define _APP_H_
 #include <stdint.h>
 #include "version.h"
-#include "solo.h"
-
-#define SOLO
 
 #define DEBUG_UART      USART1
 
@@ -49,17 +46,14 @@
 void printing_init();
 void hw_init(int lf);
 
-// Return 1 if Solo is secure/locked.
-int solo_is_locked();
-
 //#define TEST
 //#define TEST_POWER
 
 //                              0xRRGGBB
 #define LED_INIT_VALUE			0x000800
 #define LED_WINK_VALUE			0x000010
-#define LED_MAX_SCALER          15
-#define LED_MIN_SCALER          1
+#define LED_MAX_SCALER          0
+#define LED_MIN_SCALER          0
 // # of ms between each change in LED
 #define HEARTBEAT_PERIOD        150
 // Each LED channel will be multiplied by a integer between LED_MAX_SCALER
